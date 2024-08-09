@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- <link rel="stylesheet" href="/css/styles.css"> --> 
+    <link rel="stylesheet" href="/POS-system-front-end--main/css/index.css">
+    <script src="https://kit.fontawesome.com/5f61793cc7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="title">
+            <h1>Home</h1>
+        </div>
+
+        <div class="nav-bar">
+            <ul>
+                <div class="nav-item">
+                    <li><a href="#default">Home</a></li>
+                </div>
+                <div class="nav-item">
+                    <li><a href="#customer-section">Customer</a></li>
+                </div>
+                <div class="nav-item">
+                    <li><a href="#item-section">Item</a></li>
+                </div>
+                <div class="nav-item">
+                    <li><a href="#order-section">Order</a></li>
+                </div>        
+            </ul> 
+        </div>
+    </header>
+<div id="default" class="section">
+
+</div>
+
+
+    <!-- Customer Section -->
+    <section id="customer-section" class="section">
+        <div id="content">
+            <form id="form">
+                <h1 class="section-header">Customer Registration</h1>
+                <p class="detail-title">Customer ID</p>
+                <textarea id="CustomerId" rows="1" class="text-field"></textarea>
+                <p class="detail-title">Customer Name</p>
+                <textarea id="CustomerName" rows="1" class="text-field"></textarea>
+                <p class="detail-title">Customer Address</p>
+                <textarea id="CustomerAddress" rows="1" class="text-field"></textarea>
+                <p class="detail-title">Customer Salary</p>
+                <textarea id="CustomerSalary" rows="1" class="text-field"></textarea>
+                <br>
+                <div id="btn-list">
+                    <button id="btn-save-customer" class="button" type="button">Save Customer</button>
+                    <button id="btn-remove-customer" class="button"  type="button">Remove</button>
+                    <button id="btn-update-customer" class="button" type="button">Update</button>
+                    <button id="btn-getall-customer" class="button" type="button">Get All</button>
+                    <button id="btn-clearall-customer" class="button" type="button">Clear All</button>
+                </div>
+            </form>
+            <div class="table">
+                <table id="customer-table">
+                    <thead>
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>Customer Name</th>
+                            <th>Customer Address</th>
+                            <th>Customer Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customer-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+    <script type="module">
+        import { saveCustomer } from '../controller/customer Controller.js';
+        document.getElementById('btn-save-customer').addEventListener('click', saveCustomer);
+
+        import { deleteCustomer } from '../controller/customer Controller.js';
+        document.getElementById('btn-remove-customer').addEventListener('click', deleteCustomer);
+
+        // import { searchCustomer } from '../controller/customer Controller.js';
+        // document.getElementById('btn-remove').addEventListener('click', searchCustomer);
+        
+        import { updateCustomer } from '../controller/customer Controller.js';
+        document.getElementById('btn-update-customer').addEventListener('click', updateCustomer);
+
+        import { clearFields } from '../controller/customer Controller.js';
+        document.getElementById('btn-clearall-customer').addEventListener('click', clearFields);
+
+        // document.getElementById('CustomerId').addEventListener('keyup', function(event){
+        //     if(event.key === 'Enter'){
+        //         searchCustomer();
+        //     }
+        // })
+    </script>
+
+
+</section>
+
+
+<!-- ----Item Section---- -->
+
+<section id="item-section" class="section">
+    <div id="content">
+        <form>
+            <h1 class="section-header">Item Form</h1>
+
+            <p class="detail-title">item Code</p>
+            <textarea name="item code" id="ItemCode" rows="1" class="text-field"></textarea>
+
+            <p class="detail-title">Item Name</p>
+            <textarea name="item name" id="ItemName" rows="1" class="text-field"></textarea>
+
+            <p class="detail-title">Item Qty</p>
+            <textarea name="item qty" id="ItemQty" rows="1" class="text-field"></textarea>
+
+            <p class="detail-title">Unit Price</p>
+            <textarea name="unit price" id="UnitPrice" rows="1" class="text-field"></textarea>
+
+            <br>
+
+            <div id="btn-list">
+                <button id="btn-save-item" class="button" type="button">Save Item</button>
+                <button id="btn-remove-item" class="button" type="button">Remove</button>
+                <button id="btn-update-item" class="button" type="button">Update</button>
+                <button id="btn-getall-item" class="button" type="button">Get All</button>
+                <button id="btn-clearall-item" class="button" type="button">Clear All</button>
+            </div>
+        </form>
+
+        <div class="table">
+            <table id="item-table">
+                <thead>
+                    <tr>
+                        <th>Item Code</th>
+                        <th>Item name</th>
+                        <th>Item Qty</th>
+                        <th>Item Price</th>
+                    </tr>
+                </thead>
+                <tbody id="item-table-body">
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+
+    <script type="module">
+        import { saveItem } from '../controller/ItemController.js';
+        document.getElementById('btn-save-item').addEventListener('click', saveItem);
+
+        import { deleteItem } from '../controller/ItemController.js';
+        document.getElementById('btn-remove-item').addEventListener('click', deleteItem);
+
+        // import { searchItem } from '../controller/ItemController.js';
+        // document.getElementById('btn-remove').addEventListener('click', searchCustomer);
+        
+        import { updateItem } from '../controller/ItemController.js';
+        document.getElementById('btn-update-item').addEventListener('click', updateItem);
+
+        import { clearFields } from '../controller/ItemController.js';
+        document.getElementById('btn-clearall-item').addEventListener('click', clearFields);
+
+        // document.getElementById('ItemCode').addEventListener('keyup', function(event){
+        //     if(event.key === 'Enter'){
+        //         searchItem();
+        //     }
+        // })
+    </script>
+
+    
+
+</section>
+
+
+<!-- ----Order Section---- -->
+
+<section id="order-section" class="section">
+
+    
+
+    <div class="card-container">
+        <div class="card-invoice-details">
+            <div class="card-head">
+                <p>Invoice Details</p>
+            </div>
+            <div class="card-content">
+                <div>
+                    <p>Order ID : </p>
+                    
+                    <textarea name="order id" id="OrderSectionOrderId" ></textarea>
+                    
+                    
+                </div>
+                <div>
+                    <p>Date :</p>
+                    <!-- <textarea name="date" id="Date" ></textarea> -->
+                    <input type="date" id="date-picker">
+                </div>
+                <div>
+                    <p>Customer :</p>
+                    <select name="customer" id="customer-select-field">
+                        <option value="" disabled selected>Select Customer</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Customer ID :</p>
+                    <textarea name="customer id" id="OrderSectionCustomerId"></textarea>
+                </div>
+                <div>
+                    <p>Name :</p>
+                    <textarea name="customer name" id="OrderSectionCustomerName"></textarea>
+                </div>
+                <div>
+                    <p>Salary : </p>
+                    <textarea name="salary" id="OrderSectionCustomerSalary"></textarea>
+                </div>
+                <div>
+                    <p>Address :</p>
+                    <textarea name="customer address" id="OrderSectionCustomerAddress"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-item-select">
+            <div class="card-head">
+                <p>Item Select</p>
+            </div>
+            <div class="card-content">
+                <div>
+                    <p>Item :</p>
+                    
+                    <select name="item" id="item-select-field">
+                        <option value="" disabled selected>Select Item</option>
+                    </select>
+                    <!-- <img src="/assets/down arrow.jpg" alt=""> -->
+                    
+                </div>
+                <div>
+                    <p>ItemCode</p>
+                    <textarea name="item code" id="OrderSectionItemCode" ></textarea>
+                </div>
+                <div class="card-content-itemdetails-tab">
+                    <div>
+                        <p>Item Name :</p>
+                        <textarea name="item name" id="OrderSectionItemName"></textarea>
+                    </div>
+                    <div>
+                        <p>Price :</p>
+                        <textarea name="item price" id="OrderSectionItemPrice"></textarea>
+                    </div>
+                    <div>
+                        <p>QtyOnH :</p>
+                        <textarea name="qty on hand" id="OrderSectionItemQty"></textarea>
+                    </div>
+                    
+                </div>
+                <br>
+                <div class="order-quantity-div">
+                    <p>Order Quantity :</p>
+                    <textarea name="order quantity" id="OrderQuantity"></textarea>
+                </div>
+                <br>
+                <div class="add-item-button-div">
+                    <button type="button" class="add-item-button" id="add-item-btn">Add Item</button>
+                </div>
+            </div>
+            
+
+            
+
+        </div>
+
+        <div class="card">
+            <div class="bill-card-content">
+                <p class="total">Total : <label for="" id="TotalLabel">00.0</label>Rs/=</p>
+                <p class="sub-total">SubTotal : <label for="" id="SubTotalLabel">00.0</label>Rs/=</p>
+
+                <div class="cash-discount-div">
+                    <div>
+                        <p>Cash :</p>
+                        <textarea name="cash" id="Cash"></textarea>
+                    </div>
+                    <div>
+                        <p>Discount : </p>
+                        <textarea name="discount" id="Discount" placeholder="10%"></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Balance :</p>
+                    <textarea name="balance" id="Balance"></textarea>
+                </div>
+
+                <div class="purchase-button-div">
+                    <button id="purchase-button">Purchase</button>
+                </div>
+            </div>
+        
+            
+        </div>
+    </div>
+
+    <div class="order-table-container">
+        <table id="order-table"> 
+            <thead>
+                <tr>
+                    <th class="itemcode-column">Item Code</th>
+                    <th class="itemname-column">Item Name</th>
+                    <th class="price-column">Price</th>
+                    <th class="quantity-column">Quantity</th>
+                    <th class="total-column">Total</th>
+                </tr>
+            </thead>
+
+            <tbody id="order-table-body">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script type="module">
+        import { loadTable } from '../controller/OrderController.js';
+        document.getElementById('add-item-btn').addEventListener('click', loadTable);
+
+        import { save } from '../controller/OrderController.js';
+        document.getElementById('purchase-button').addEventListener('click', save);
+    </script>
+
+</section>
+    
+</body>
+</html>

@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+.rajdhani-regular {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #0a6cd5;
+    height: 48px;
+}
+
+.title{
+    color: aliceblue;
+}
+
+.nav-bar ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: red;
+}
+
+.nav-item{
+    background-color: aliceblue;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item:hover{
+    background-color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item li a:hover{
+    color: rgb(12, 11, 11);
+}
+
+#content{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+/* .section-header{
+
+} */
+
+.detail-title{
+    font-size: 18px;
+}
+
+.text-field{
+    margin-top: -100px;
+    font-size: 20px;
+}
+
+.btn-list{
+    /* gap: -50px; */
+}
+
+.button{
+    margin-top: 28px;
+    height: 30px;
+    margin-right: -3.5px;
+    border: none;
+    cursor: pointer;
+}
+
+#CustomerAddress{
+    width: 200px;
+}
+
+#btn-save-customer, #btn-save-item{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(75, 201, 223);
+    color: white;
+}
+
+#btn-remove-customer, #btn-remove-item{
+    background-color: rgb(221, 49, 49);
+    color: white;
+}
+
+#btn-update-customer, #btn-update-item{
+    background-color: rgb(255, 234, 0);
+}
+
+#btn-getall-customer, #btn-getall-item{
+    background-color: green;
+    color: white;
+}
+
+#btn-clearall-customer, #btn-clearall-item{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(221, 49, 49);
+    color: white;
+}
+
+
+
+.table table th{
+    background-color: rgb(233, 68, 68);
+    color: whitesmoke;
+}
+
+.table table th, .table table td{
+    font-size: 17px;
+    font-weight: 50;
+    font-family:'Times New Roman', Times, serif;
+    padding-left: 15px;
+
+    width: 20vw;
+    height: 4vw;
+    border: 0.5px solid aliceblue;
+    text-align: left;
+}
+
+.table table tr:hover{
+    background-color: rgb(250, 165, 165);
+    cursor: pointer;
+}
+
+#customer-table-body, #item-table-body{
+    font-size: 50px;
+    background-color: aqua;
+}
+
+.section{
+    display: none;
+}
+
+.section:target{
+    display: block;
+}
+
+/*=====Order Section Styles=====*/
+
+/* #orderSection{
+    background-color: rgb(138, 231, 231);
+} */
+
+.card-container{
+    padding-top: 20px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 30% 40% 27%;
+}
+
+.card{
+    background-color: aliceblue;
+}
+
+.card-head{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(7, 181, 7);
+}
+
+.card-head p{
+    color: white;
+    padding-left: 20px;
+}
+
+.card-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+#OrderSectionCustomerAddress{
+    width: 100%;
+}
+
+.card-content textarea{
+    margin-top: -15px;
+}
+
+.card-content-itemdetails-tab{
+    display: grid;
+    grid-template-columns: 50% 28% 22%;
+    gap: 100px;
+}
+
+#ItemName{
+    width: 180px;
+}
+
+#ItemPrice{
+    
+}
+
+#ItemQty{
+    width: 80px;
+}
+
+.order-quantity-div{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+#OrderQuantity{
+    width: 180%;
+}
+
+.add-item-button-div{
+    margin-left: 459px;
+    margin-top: 23px;
+}
+
+.add-item-button{
+    color: white;
+    height: 28px;
+    width: 80px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.bill-card-content{
+    padding-left: 15px;
+}
+
+.total{
+    color: rgb(44, 162, 236);
+    font-size: 25px;
+}
+
+.sub-total{
+    color: red;
+    margin-top: -18px;
+    font-size: 25px;
+}
+
+.cash-discount-div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#Balance{
+    width: 91.5%;
+}
+
+.purchase-button-div{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#purchase-button{
+    height: 28px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(4, 163, 4);
+}
+
+.order-table-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+#order-table{
+    /* border: 1px solid black; */
+}
+
+#order-table thead{
+    background-color: rgb(0, 173, 35);
+}
+
+#order-table thead tr th{
+    color: white;
+    font-size: 17px;
+    font-weight: 50;
+    font-family:'Times New Roman', Times, serif;
+    padding-left: 15px;
+
+    height: 3vw;
+    border: 0px solid aliceblue;
+    text-align: left;
+}
+
+#order-table tbody tr td{
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    font-weight: 50;
+    font-family:'Times New Roman', Times, serif;
+    padding-left: 15px;
+
+    height: 3vw;
+    border: 0px solid aliceblue;
+    text-align: left;
+}
+
+.itemcode-column{
+    width: 10vw;
+}
+.itemname-column{
+    width: 15vw;
+}
+.price-column{
+    width: 10vw;
+}
+.quantity-column{
+    width: 12vw;
+}
+.total-column{
+    width: 10vw;
+}
+
+#order-section textarea{
+    text-align: left;
+    font-size: 20px;
+    width: 180px;
+    height: 30.5px;
+}
+
+
+
+#order-section .card-invoice-details textarea{
+    padding-top: 6px;
+    /* font-size: 20px; */
+}
+
+#order-section .card-item-select textarea{
+    padding-top: 6px;
+    font-size: 20px;
+}
+
+#order-section #SelectItemCode{
+    width: 220px;
+}
+
+#order-section #OrderSectionItemPrice{
+    width: 150px;
+}
+
+#order-section #OrderSectionItemQty{
+    width: 100px;
+}
+
+#order-section #OrderQuantity{
+    width: 530px;
+}
+
+#date-picker{
+    font-size: 15px;
+    margin-top: -20px;
+    width: 180px;
+    height: 30.5px;
+}
+
+#down-arrow-icon{
+    padding-top: -20px;
+    margin-left: -30px;
+}
+
+#customer-select-field{
+    padding-top: -10px;
+    width: 180px;
+    height: 20px;
+}
+
+#Item{
+    margin-top: -10px;
+    width: 182px;
+    height: 30px;
+}
+
+/* #Cash{
+    direction: rtl;
+} */
